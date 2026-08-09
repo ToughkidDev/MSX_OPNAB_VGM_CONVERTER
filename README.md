@@ -1,10 +1,12 @@
 # MSX_OPNAB_VGM_CONVERTER
 
-# X68000 (YM2151/okim6258) → YM2151/YM2610B/YM2608 VGM 컨버터 
-# MEGADRIVE (YM2612/SN76489) → YM2610B/YM2608 VGM 컨버터 
+ 
+### X68000 (YM2151/okim6258) / MEGADRIVE (YM2612/SN76489) → MSX NEOTRON/MAKOTO VGM Converter
+---
 
 X68000 (YM2151/okim6258)와 
-세가 메가드라이브/제네시스(YM2612 FM / SN76489 PSG) VGM 파일을, 
+세가 메가드라이브/제네시스(YM2612 FM / SN76489 PSG) VGM 파일을
+
 MSX용 사운드 카트리지인 **Neotron(YM2610B/OPNB)** 또는 **Makoto(YM2608/OPNA)** 로 재생할 수 있는 VGM 파일로 변환하는 컨버터.
 
 ---
