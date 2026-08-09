@@ -40,8 +40,11 @@ vgm_convert.py vgm_collection/ converted/
 
 
  `--ym2608`     : YM2610B(기본값) 대신 YM2608(OPNA)용 VGM으로 출력. 
+ 
  `--opt`        : YM2612 DAC/PCM을 원본 드라이버가 실제로 쓰던 재생 속도로 다운샘플링한 뒤 재인코딩(용량 절감, 음질 손실 없이 레이트만 원본에 맞춤). 
+ 
  `--ssg-vol N`  : SSG 볼륨 오프셋, 약 3dB 단위(소수점 스텝 가능, 예: `-6.25`). 
+     
      기본값: `--ym2608`는 `-2`, YM2610B는 `-3.03`(YM2608 기준 약 70% 진폭 - Neotron의 SSG가 Makoto보다 FM 파트 대비 더 높게 출력되기 때문) 
 
  YM2610B는 디폴트 사항 (Neotron은 pcm을 위한 고정 용량 제한이 없음) 
