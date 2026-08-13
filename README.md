@@ -14,11 +14,11 @@ MSX용 사운드 카트리지인 **Neotron(YM2610B/OPNB)** 또는 **Makoto(YM260
 ## 1. 기본 사용법
 
 ```
-vgm_convert.py [--ym2608] <input.vgm> <output.vgm>      단일 파일 변환
-vgm_convert.py [--ym2608] <pattern...>                  일괄 변환 (와일드카드 * ? 가능)
+x68conv.exe [--ym2608] <input.vgm> <output.vgm>      단일 파일 변환
+x68conv.exe [--ym2608] <pattern...>                  일괄 변환 (와일드카드 * ? 가능)
                                                               출력 파일명: <원본이름>_2610b.vgm (또는 _2608)
-vgm_convert.py [--ym2608] <directory>                   디렉터리 안의 모든 .vgm/.vgz를 재귀적으로 변환
-vgm_convert.py [--ym2608] <inputs...> <output_dir>      여러 입력을 output_dir 폴더로 일괄 변환
+x68conv.exe [--ym2608] <directory>                   디렉터리 안의 모든 .vgm/.vgz를 재귀적으로 변환
+x68conv.exe [--ym2608] <inputs...> <output_dir>      여러 입력을 output_dir 폴더로 일괄 변환
                                                          (하위 폴더 구조 그대로 유지)
 ```
 
@@ -27,11 +27,11 @@ vgm_convert.py [--ym2608] <inputs...> <output_dir>      여러 입력을 output_
 ### 예시
 
 ```
-vgm_convert.py song.vgm song_out.vgm
-vgm_convert.py *.vgm *.vgz
-vgm_convert.py "Gunstar Heroes"
-vgm_convert.py --ym2608 sonic??.vgm out/
-vgm_convert.py vgm_collection/ converted/
+x68conv.exe song.vgm song_out.vgm
+x68conv.exe *.vgm *.vgz
+x68conv.exe "Gunstar Heroes"
+x68conv.exe --ym2608 sonic??.vgm out/
+x68conv.exe vgm_collection/ converted/
 ```
 
 ---
@@ -57,17 +57,17 @@ vgm_convert.py vgm_collection/ converted/
 
 ```
 # 기본(YM2610B, 44.1kHz 그대로)
-vgm_convert.py song.vgm song_2610b.vgm
+x68conv.exe song.vgm song_2610b.vgm
 
 # YM2610B, 용량 절약(384KB 예산 자동 맞춤)
-vgm_convert.py --opt song.vgm song_2610b_opt.vgm
+x68conv.exe --opt song.vgm song_2610b_opt.vgm
 
 # YM2608(Makoto), 항상 256KB에 맞춰 다운샘플링됨
-vgm_convert.py --ym2608 song.vgm song_2608.vgm
+x68conv.exe --ym2608 song.vgm song_2608.vgm
 
 # SSG 볼륨 수동 조정
-vgm_convert.py --ym2608 --ssg-vol -4 song.vgm song_2608_quiet.vgm
+x68conv.exe --ym2608 --ssg-vol -4 song.vgm song_2608_quiet.vgm
 
 # 폴더 전체 일괄 변환
-vgm_convert.py --opt "게임폴더/" 변환결과/
+x68conv.exe --opt "게임폴더/" 변환결과/
 ```
